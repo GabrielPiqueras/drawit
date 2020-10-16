@@ -1,0 +1,692 @@
+
+/* Pagina de Inicio */
+
+/* ANTIGUOS COLORES HEADER
+
+header{
+    background:#2c3e50;
+    color:#fff;
+}*/
+
+/************************** ESTILOS GENERALES **************************/
+
+html,body{
+    height: 100%;
+}
+
+footer{
+    background:#16a085;
+    color:#fff;
+}
+
+/* SELECT DEL INICIO */
+
+
+  
+
+/************************** ESTILOS HEADER **************************/
+
+header {
+    background: #1c2a38;
+    color: #fff;
+    border-bottom: 2px solid #2f4861;
+}
+
+/* Buscador */
+
+button#buscar {
+    top: 16%;
+    position: absolute;
+}
+
+#zonaBuscar{
+    display: none;
+    background: rgba(0, 0, 0, 0.75);
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    z-index: 1;
+}
+
+#cajaBuscador{
+    position: absolute;
+    width: 45%;
+    top:45%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    border-bottom: 3px solid #64c164;
+}
+
+input#buscador{
+    width: 80%;
+    font-size: 35px;
+    background: transparent;
+    color: white;
+    border: none;
+}
+
+input#buscador:focus{ outline: none; }
+
+button#iniciarBusqueda{
+    top: 160%;
+    right: 0%;
+    position: absolute;
+}
+
+#cerrarBusqueda{
+    color: #a3a3a3;
+    position: absolute;
+    float: right;
+    font-size: 40px;
+    bottom: 80%;
+    left: 100%;
+    cursor: pointer;
+    opacity: 0.8;
+}
+
+#cerrarBusqueda:hover{ color: white; opacity: 1; }
+
+/* Foto de perfil y nombre */
+
+img#fotoPerfil {
+    width: 60px;
+    height: 58px;
+    object-fit: cover;
+}
+
+span#nombreUsuario {
+    font-size: 18px;
+}
+
+/* Estilos menu de Usuario */
+
+  .usermenu {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .usermenu-opciones {
+    display: none;
+    border-radius: 5px;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  
+  .usermenu-opciones a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+  
+  .usermenu-opciones a:hover {background-color: #ddd;border-radius: 5px;}
+  .usermenu:hover .usermenu-opciones {display: block;}
+  /*.usermenu:hover .dropbtn {background-color: #3e8e41;}*/
+  
+  /* Notificaciones */
+
+  img#campanaN {
+    width: 44px;
+    margin-right: 20px;
+    margin-top: 5px;
+    cursor: pointer;
+  }
+
+  .notificaciones {
+    position: relative;
+    display: inline-block;
+  }
+
+  .ventanaNotif{
+    display: none;
+    color: black;
+    width: 335px;
+    border-radius: 5px;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    max-height: 508px;
+    overflow-y: scroll;
+    left: -125px;
+    margin-top: 28px;
+    cursor: pointer;
+  }
+
+  #tablaNotificaciones {
+    margin-top: 40px;
+    font-size: 15px;
+  }
+
+  #tablaNotificaciones tr:hover{
+    background: #cccbd6;
+    cursor: pointer;
+  }
+
+  td.usuarioN{
+      max-width: 280px;
+      padding-left: 5px;
+  }
+  td.tiempoN{
+      padding-left: 10px;
+      width: 57px;
+      color: #3432b1;
+      font-style: italic;
+  }
+  td.fechaN{
+      display: none;
+  }
+
+  td.imagenN{
+      width: 50px;
+      margin-right: 20px;
+  }
+
+  td.imagenN img{
+    width: 70px;
+    height: 70px;
+    object-fit: cover;
+}
+
+button#numNotif {
+    margin-top: 13px;
+    margin-left: -18px;
+    margin-right: 23px;
+    padding: 0px;
+    background: #dc5c35;
+    opacity: 1;
+    border-color: #dc5c35;
+    border-radius: 100px;
+    width: 26px;
+    height: 25px;
+    font-size: 14px;
+}
+
+.noleida{
+    background: #ffd9c4;
+}
+
+/* Buscador */
+
+#buscador{
+    margin-top: 10px;
+}
+/************************** ESTILOS BODY **************************/
+
+/* Select de orden de publicaciones */
+
+select#ordenPublicaciones {
+    background-color: #c1a2ff;
+    color: black;
+    font-weight: 500;
+}
+
+#cuerpo{
+    background-color: #2C2C50;
+}
+
+/* Caja principal */
+
+div.principal{
+    padding-right: 10px;
+    padding-left: 10px;
+    padding-top: 4%;
+}
+
+/* Filas, cajas e imagenes */
+
+div.fila {
+    height: 24%!important;
+    margin-top: 1%;
+}
+div.caja {
+    height: 100%;
+    padding-right: 10px;
+    padding-left: 10px;
+}
+div.caja img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+#posts {
+height: auto!important;
+}
+
+/* Degradado hover en las imagenes */
+
+.foto:hover:after {
+    content: '';
+    position: absolute;
+    top: 20px;
+    bottom: 29px;
+    left: 0;
+    right: 0;
+    background-image: linear-gradient(180deg,rgba(22,26,31,0), #000000e8);
+    cursor: pointer;
+}
+
+.caption.caption-visible {
+    z-index: 1;
+}
+
+/* Para Justified gallery */
+
+.justified-gallery > a > .caption,
+.justified-gallery > div > .caption,
+.justified-gallery > figure > .caption{
+    background: none!important;
+}
+
+.caption.caption-visible{
+      margin-bottom: 30px!important;
+}
+
+/* Publicaciones en la pagina de inicio */
+
+span.tituloPost{
+    font-size: 14px;
+    font-weight: bold;
+    margin-top: 10px;
+    margin-left: 5px;
+}
+
+i.corazon {
+    font-size: 20px;
+    width: 20px!important;
+    float: right;
+    margin-top: 5px;
+    margin-right: 3px;
+}
+
+span.nlikes {
+    float: right;
+    font-size: 19px;
+    margin-right: 4px;
+    margin-top: 1px;
+}
+
+/************************** ESTILOS PAGINA DE REGISTRO **************************/
+
+/* Pagina de registro */
+
+h2.registrate {
+    margin-top: 1%;
+    margin-bottom: 2%;
+}
+
+#registroPrincipal {
+    height: 100%;
+}
+
+#registroPrincipal input{
+    box-shadow: 0px 0px 7px 2px rgba(0,0,0,0.44);
+}
+
+#registroPrincipal .btn-success{
+    box-shadow: 0px 0px 14px 2px rgba(77, 255, 156, 1);
+}
+
+/************************** ESTILOS PAGINA DE PERFIL **************************/
+
+#estadisticasPerfil{font-size: 17px;}
+
+.nPublicaciones{ color:#0b8542 }
+.nMeGusta{ color: #850b0b }
+.nComentarios{ color: #0b2885 }
+
+#fotoPublica{
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    float: right;
+}
+
+#fotoEditarPerfil{
+    width: 151px;
+    height: 151px;
+    object-fit: cover;
+}
+
+td.publicacion{
+    width: 170px;
+    height: 170px;
+}
+
+td.publicacion img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/************************** ESTILOS PAGINA DE CATEGORIA **************************/
+
+#cuerpoCategoria{
+    background-color: #32445a;
+}
+
+#tituloCategoria{
+    color: white;
+}
+
+/************************** ESTILOS PAGINA DE BUSQUEDA **************************/
+
+#resultadosBusq a{
+    font-size: 20px;
+}
+
+#tabPublicaciones{
+    color: #2d1e80;
+}
+
+#tabUsuarios{
+    color: #803a1e;
+}
+
+#tablaUsuarios td{
+    width: 100px;
+    height: 100px;
+}
+
+#tablaUsuarios img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.tdNombre{
+    padding-left: 17px;
+    font-size: 18px;
+}
+
+/************************** ESTILOS DE POST **************************/
+
+/* Post de dibujo individual */
+
+#cabeceraPost {
+    margin-top: 2%;
+    margin-bottom: 1%;
+}
+
+#tituloDib,#descripcionDib,#comentarios {
+    padding-left: 5%;
+}
+
+div#post img {
+    width: 75%;
+    max-height: 100%;
+    margin-right: 4%;
+}
+
+/* Boton reportar */
+
+.reportar{
+    margin-right: 2%;
+    margin-top: 0.4%;
+}
+
+#botonReportar{
+    color: #841111;
+    font-size: 24px;
+    margin-right: 1%;
+}
+
+#botonReportar:hover{
+    color: #ce1818;
+    font-size: 24px;
+    margin-right: 1%;
+    background: none;
+}
+
+/* Ventana para Reportar */
+
+#vReportar{ padding-top: 6%; }
+
+/* Boton compartir */
+
+.compartir{
+    margin-right: 2%;
+    margin-top: 0.25%;
+}
+
+#botonCompartir{
+    color: #0448ad;
+    text-decoration: none;
+    background-color: transparent;
+    font-size: 28px;
+}
+
+#botonCompartir:hover{
+    color: #007bff;
+    background: none;
+}
+
+/* Ventana para Compartir */
+
+#vCompartir{
+    padding-top: 6%;
+}
+#vCompartir > .modal-dialog{
+    width: 340px;
+}
+.redesSociales > .row{
+    margin-bottom: 7%;
+    margin-right: 4%;
+    margin-left: 4%;
+}
+
+.redSocial{
+    -webkit-transition: all .3s ease;
+    -moz-transition: all .3s ease;
+    -o-transition: all .3s ease;
+    -ms-transition: all .3s ease;
+    /*width: 75%;*/
+}
+
+.redSocial:hover{
+    -webkit-transform: scale(1.15);
+    -moz-transform: scale(1.15);
+    -ms-transform: scale(1.15);
+    -o-transform: scale(1.15);
+    transform: scale(1.15);
+    opacity: 0.9;
+}
+
+/* Likes en los post */
+
+span#likesPost{
+    font-size: 31px;
+    vertical-align: middle;
+    margin-right: 0.5%;
+}
+
+img#corazonPost {
+    /* width: 55px; */
+    width: 30%;
+    margin-top: 5%;
+    margin-right: 18%;
+    -webkit-transition: all .4s ease;
+    -moz-transition: all .4s ease;
+    -o-transition: all .4s ease;
+    -ms-transition: all .4s ease;
+    /* Si sale algo como error es por la compatibilidad del navegador */
+}
+
+img#corazonPost:hover {
+    -webkit-transform: scale(1.25);
+    -moz-transform: scale(1.25);
+    -ms-transform: scale(1.25);
+    -o-transform: scale(1.25);
+    transform: scale(1.25);
+    opacity: 0.9;
+}
+
+/* Comentarios */
+
+#cajaComentar{
+    width: 100%;
+    margin-top: 20px
+}
+
+#botonComentar{
+    font-size: 16px;
+    margin-top: 20px;
+}
+
+#comentarios > h4{
+    margin-top: 10px;
+    margin-bottom: 35px;
+}
+
+#comentario:nth-child(odd){ background: #d3e0fb; }
+#comentario:nth-child(even){ background: #e7eefd; }
+
+#comentario{ padding: 12px; }
+
+#fotoCom {
+    padding-left: 0px;
+}
+
+#fotoCom img{
+    width: 70px;
+    height: 70px;
+    object-fit: cover;
+}
+
+#contenidoCom{
+    padding-left: 35px;
+}
+
+
+/************************** ESTILOS PAGINA DE SUBIR POST **************************/
+
+#subirPrincipal{
+    background: url(../img/subirfondo.jpg);
+    background-size: 100%;
+    height: 93%;
+}
+
+#subirSegundario{
+    background: white;
+    padding-bottom: 2%;
+    border-radius: 0 0 6px 6px;
+}
+
+/************************** ESTILOS PAGINA DE EDITAR POST **************************/
+
+#editarPrincipal{
+    background: url(../img/editarpost.jpg);
+    background-size: 100%;
+    height: 93%;
+}
+
+#editarSecundario{
+    background: white;
+    padding-bottom: 2%;
+    border-radius: 0 0 6px 6px;
+}
+
+/************************** QUERYS **************************/
+
+
+@media (min-width: 768px){
+    header{
+        padding-bottom: 5%;
+    }
+}
+
+/************************** TAMAÑO XS **************************/
+
+@media (max-width: 575px) {
+
+    /* Header */
+    .titulo { zoom: 0.85;z-index: 1;}
+
+    header i{
+        font-size: 30px;
+    }
+
+    .zonaLogin a,button#buscar{
+        font-size: 0px;
+    }
+    button#buscar {
+        height: 50px;
+        width: 67px;
+        zoom: 0.85;
+        top: 15%;
+        left: 75%;
+        z-index: 1;
+    }
+
+    img#campanaN {
+        margin-right: 0px;
+    }
+
+    .usermenu-opciones {
+        right: -5%;
+    }
+
+    #cajaBuscador{ width: 80%; }
+
+    span#nombreUsuario { font-size: 15px; }
+    img#fotoPerfil { width: 50px;height: 50px; }
+    .ventanaNotif {left: -246%;}
+
+    /* Publicaciones */
+
+    div#post img {
+        width: 100%;
+        margin-top: 4%;
+    }
+
+    span#likesPost {
+        font-size: 19px;
+        font-weight: bold;
+    }
+
+    #contenidoCom {
+        padding-left: 23%;
+    }
+}
+
+/************************** TAMAÑO SM **************************/
+@media (max-width: 767px) {
+
+    header {
+        height: 15%;
+    }
+
+    button#buscar {
+        right: 33%!important;
+    }
+}
+
+/************************** TAMAÑO MD **************************/
+@media (max-width: 991px) {
+    .cajaHeader {
+        max-width: 100%;
+    }
+
+    button#buscar {
+        right: 49%;
+    }
+}
+
+/************************** TAMAÑO LG **************************/
+@media (max-width: 1199px) {
+
+}
+
+/************************** TAMAÑO XL **************************/
+
+@media (min-width: 1200px) {
+    button#buscar {
+        right: 55%;
+    }
+}
+
+

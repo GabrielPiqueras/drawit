@@ -1,0 +1,31 @@
+Options +FollowSymLinks
+RewriteEngine on
+
+# Inicio
+RewriteRule ^inicio$ index.php
+RewriteRule ^/$ index.php?opcion=$1
+RewriteRule ^salir$ salir.php
+
+# Registro
+RewriteRule ^registro/$ registrar/registro.php
+RewriteRule ^verificar/(\w+)$ registrar/verificarCuenta.php?hash=$1
+
+# Perfil
+RewriteRule ^user/([\wáéíóúÁÉÍÓÚ]+)$ perfil/perfil.php?user=$1
+
+# Publicacion
+RewriteRule ^dibujo/([0-9]+)$ publicacion/post.php?id=$1
+RewriteRule ^editar/([0-9]+)$ publicacion/editar_post.php?id=$1
+
+# Buscar
+# RewriteRule ^buscar/([\w\sáéíóúÁÉÍÓÚ]+)$ dibujos/buscar.php?termino=$1
+RewriteRule ^buscar/(.+)$ dibujos/buscar.php?termino=$1
+
+# Subidas y listado por categoria
+RewriteRule ^subir$ dibujos/subir.php
+RewriteRule ^mis-subidas[/]$ dibujos/mis_subidas.php
+RewriteRule ^categoria/([\wáéíóú]+)$ dibujos/categoria.php?cat=$1
+
+# Panel de administracion
+RewriteRule ^administracion$ admin/login.php
+RewriteRule ^administracion/panel$ admin/panel.php
